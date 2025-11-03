@@ -1,0 +1,61 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Jenkins main module                                                [pom]
+[INFO] Jenkins BOM                                                        [pom]
+[INFO] Internal SPI for WebSocket                                         [jar]
+[INFO] Jetty 12 (EE 9) implementation for WebSocket                       [jar]
+[INFO] Jenkins cli                                                        [jar]
+[INFO] Jenkins core                                                       [jar]
+[INFO] Jenkins war                                                        [war]
+[INFO] Tests for Jenkins core                                             [jar]
+[INFO] Jenkins coverage                                                   [pom]
+[INFO] 
+[INFO] -----------------< org.jenkins-ci.main:jenkins-parent >-----------------
+[INFO] Building Jenkins main module 2.535-SNAPSHOT                        [1/9]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ jenkins-parent ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ jenkins-parent ---
+[INFO] Executing: /bin/sh -c cd '/Users/ccs/jenkins' && 'git' 'rev-parse' '--show-prefix'
+[INFO] Working directory: /Users/ccs/jenkins
+[INFO] Executing: /bin/sh -c cd '/Users/ccs/jenkins' && 'git' 'status' '--porcelain' '.'
+[INFO] Working directory: /Users/ccs/jenkins
+[WARNING] Ignoring unrecognized line: ?? cleanbuild
+[INFO] Executing: /bin/sh -c cd '/Users/ccs/jenkins' && 'git' 'log' '-1' '--no-merges' '--format=format:%H %aI %aE %aN'
+[INFO] Working directory: /Users/ccs/jenkins
+[INFO] Storing buildNumber: ed8e750dabdaed209f29420db82f4f785cb4e4a0 at timestamp: 1762179736829
+[INFO] Executing: /bin/sh -c cd '/Users/ccs/jenkins' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /Users/ccs/jenkins
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.6.1:enforce (display-info) @ jenkins-parent ---
+[WARNING] ruleName requireExtensionVersion with implementation org.apache.maven.plugins.enforcer.RequireExtensionVersionuses the deprecated Maven Enforcer Plugin API. This will not be supported in a future version of the plugin. Please contact the rule maintainer to upgrade the rule implementation to the current API.
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Jenkins main module 2.535-SNAPSHOT:
+[INFO] 
+[INFO] Jenkins main module ................................ FAILURE [  1.332 s]
+[INFO] Jenkins BOM ........................................ SKIPPED
+[INFO] Internal SPI for WebSocket ......................... SKIPPED
+[INFO] Jetty 12 (EE 9) implementation for WebSocket ....... SKIPPED
+[INFO] Jenkins cli ........................................ SKIPPED
+[INFO] Jenkins core ....................................... SKIPPED
+[INFO] Jenkins war ........................................ SKIPPED
+[INFO] Tests for Jenkins core ............................. SKIPPED
+[INFO] Jenkins coverage ................................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.688 s
+[INFO] Finished at: 2025-11-03T09:22:17-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-enforcer-plugin:3.6.1:enforce (display-info) on project jenkins-parent: Execution display-info of goal org.apache.maven.plugins:maven-enforcer-plugin:3.6.1:enforce failed: Failed to create enforcer rules with name: requireExtensionVersion or for class: org.apache.maven.plugins.enforcer.RequireExtensionVersion -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginExecutionException

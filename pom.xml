@@ -70,7 +70,7 @@ THE SOFTWARE.
     <connection>scm:git:https://github.com/ccschwing/jenkins.git</connection>
     <developerConnection>scm:git:git@github.com:ccschwing/jenkins.git</developerConnection>
     <tag>${scmTag}</tag>
-    <url>https://github.com/jenkinsci/jenkins</url>
+    <url>https://github.com/ccschwing/jenkins</url>
   </scm>
 
   <issueManagement>
@@ -82,7 +82,6 @@ THE SOFTWARE.
     <revision>2.535</revision>
     <changelist>-SNAPSHOT</changelist>
     <project.build.outputTimestamp>2025-10-28T12:29:21Z</project.build.outputTimestamp>
-    <!-- <outputTimestamp>${project.build.outputTimestamp}</outputTimestamp> -->
 
     <!-- configuration for patch tracker plugin  -->
     <project.patchManagement.system>github</project.patchManagement.system>
